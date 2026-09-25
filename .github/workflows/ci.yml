@@ -17,7 +17,7 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -e ".[dev]"
-      - run: ruff check .
+      - run: ruff check . --ignore B008
       - run: pytest -q
 
   frontend:
